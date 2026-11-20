@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import EmptyCart from "../assets/empty_cart.svg";
 import { Link } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ const total = () => {
                     return (
                     <div className="cart__item">
                       <div className="cart__book">
-                        <img src={book.url} className='cart__book--img'/>
+                        <img src={book.url} alt={book.title} className='cart__book--img'/>
                         <div className="cart__book--info">
                           <span className="cart__book--title">{book.title}</span>
                           <span className="cart__book--price">${(book.salePrice || book.originalPrice).toFixed(2)}</span>
